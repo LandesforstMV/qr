@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wald-Entdecker Station</title>
+    <script src="daten.js"></script>
     <style>
         :root {
             --forstgruen: #154734;      
-            --sommergruen: #3e822c;     
-            --fruehlingsgruen: #91ae2d; 
             --weiss: #ffffff;
             --schwarz: #2d2a26;
         }
@@ -17,7 +16,7 @@
 
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--sommergruen);
+            background-color: var(--forstgruen);
             color: var(--schwarz);
             margin: 0;
             padding: 0;
@@ -28,24 +27,36 @@
 
         header {
             width: 100%;
-            background-color: var(--forstgruen);
-            padding: 20px 0;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.4s ease;
         }
 
-        .logo-placeholder {
-            width: 200px;
-            height: 50px;
+        .header-content {
+            max-width: 500px;
             margin: 0 auto;
-            border: 1px dashed rgba(255,255,255,0.5);
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+        }
+
+        #kat-label {
             color: white;
-            font-size: 0.8rem;
+            margin: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        #station-number {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            font-weight: bold;
         }
 
         .container {
@@ -61,19 +72,6 @@
             margin-bottom: 30px;
         }
 
-        .kategorie {
-            display: inline-block;
-            background-color: var(--forstgruen);
-            color: var(--weiss);
-            padding: 13px 17px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 10px;
-            border: 1px solid var(--fruehlingsgruen);
-        }
-
         h1 { margin:0; font-size: 2.2rem; color: var(--weiss); }
 
         .card {
@@ -81,6 +79,7 @@
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         h2 {
@@ -93,7 +92,6 @@
         }
 
         .step-num {
-            background-color: var(--forstgruen);
             color: var(--weiss);
             width: 28px;
             height: 28px;
@@ -101,96 +99,93 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-right: 10px;
+            margin-right: 12px;
             font-size: 0.9rem;
             font-weight: bold;
             flex-shrink: 0;
+            transition: background-color 0.4s ease;
         }
 
-        p { line-height: 1.5; font-size: 1.05rem; margin: 0; color: #333; }
+        p { line-height: 1.6; font-size: 1.05rem; margin: 0; color: #333; }
 
         footer {
             text-align: center;
-            color: white;
-            font-size: 0.8rem;
+            padding:0 20px 5px 20px;
             margin-top: auto;
-            margin-bottom:15px;
+        }
+
+        footer p {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.6);
         }
     </style>
 </head>
 <body>
 
-<header id="category-header" style="width: 100%; background-color: var(--category-color, #154734); padding: 15px 0; position: sticky; top: 0; z-index: 100; transition: background-color 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
-    <div style="max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between;">
-        <h1 id="kat-label" style="color: white; margin: 0; font-family: sans-serif; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">
-            
-        </h1>
-        <span style="color: rgba(255,255,255,0.8); font-family: sans-serif; font-size: 0.9rem;" id="station-number">
-            Station 01
-        </span>
+<header id="category-header">
+    <div class="header-content">
+        <span id="kat-label">Wald-Entdecker</span>
+        <span id="station-number">Station --</span>
     </div>
 </header>
 
-    <div class="container" id="content-app">
-        <div class="intro">
-            <h1 id="thema-label">Lade...</h1>
-        </div>
-
-        <div id="cards-container">
-            </div>
+<div class="container">
+    <div class="intro">
+        <h1 id="thema-label">Lade...</h1>
     </div>
 
-<footer style="width: 100%; text-align: center;">
+    <div id="cards-container">
+        </div>
+</div>
 
-    <p style="font-size: 0.8rem; color: #fff;">&copy; 2026 Landesforstanstalt Melckenburg-Vorpommern</p>
+<footer>
+    <p>&copy; 2026 Landesforstanstalt Mecklenburg-Vorpommern</p>
 </footer>
 
-    <script>
-        // Hier kannst du deine Daten aus Excel/JSON einfügen
-        const stationData = {
-            kategorie: "Naturschutz & Lebensräume",
-            thema: "Insektenhotel",
-            bereiche: [
-                {
-                    titel: "Was siehst du hier?",
-                    text: "Ein Insektenhotel bietet Wildbienen, Käfern und anderen Insekten einen geschützten Platz zum Nisten und Überwintern. Die Röhren, Löcher und Hohlräume ahmen natürliche Strukturen wie hohle Stängel oder Risse im Holz nach."
-                },
-                {
-                    titel: "Warum ist das wichtig?",
-                    text: "Viele Insekten finden in der aufgeräumten Landschaft keine natürlichen Nistplätze mehr. Hier helfen wir ihnen direkt vor Ort."
-                },
-                {
-                    titel: "Schon gewusst?",
-                    text: "Über 560 Wildbienenarten leben in Deutschland – viele davon sind auf kleine Hohlräume angewiesen."
-                },
-                {
-                    titel: "Entdeckerfrage",
-                    text: "Schau dir die Röhren genau an: Sind einige mit Lehm oder Pflanzenresten verschlossen? Dann hat dort bereits eine Biene ihr Nest gebaut."
-                }
-            ]
-        };
+<script>
+    function renderStation() {
+        // 1. ID aus der URL holen (z.B. station.html?id=2)
+        const urlParams = new URLSearchParams(window.location.search);
+        const stationID = urlParams.get('id') || "1"; 
 
-        // Funktion zum Befüllen der Seite
-        function renderStation() {
-            document.getElementById('kat-label').textContent = stationData.kategorie;
-            document.getElementById('thema-label').textContent = stationData.thema;
+        // 2. Daten aus dem Katalog in daten.js holen
+        const s = stationsKatalog[stationID];
 
+        if (s) {
+            const farbe = s.farbe || "#154734"; // Fallback auf Forstgrün
+
+            // 3. Header & Texte anpassen
+            document.getElementById('category-header').style.backgroundColor = farbe;
+            document.getElementById('kat-label').textContent = s.kategorie;
+            document.getElementById('thema-label').textContent = s.thema;
+            document.getElementById('station-number').textContent = "Station " + (stationID.padStart(2, '0'));
+
+            // 4. Karten generieren
             const container = document.getElementById('cards-container');
-            container.innerHTML = ""; // Leer machen
+            container.innerHTML = ""; 
 
-            stationData.bereiche.forEach((bereich, index) => {
+            s.bereiche.forEach((bereich, index) => {
                 const card = document.createElement('div');
                 card.className = 'card';
                 card.innerHTML = `
-                    <h2><div class="step-num">${index + 1}</div> ${bereich.titel}</h2>
+                    <h2>
+                        <div class="step-num" style="background-color: ${farbe}">
+                            ${index + 1}
+                        </div> 
+                        ${bereich.titel}
+                    </h2>
                     <p>${bereich.text}</p>
                 `;
                 container.appendChild(card);
             });
+        } else {
+            document.getElementById('thema-label').textContent = "Station nicht gefunden";
         }
+    }
 
-        // Start
-        renderStation();
-    </script>
+    // Beim Laden der Seite ausführen
+    window.onload = renderStation;
+</script>
+
 </body>
 </html>
