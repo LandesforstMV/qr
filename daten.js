@@ -1,6 +1,7 @@
 const stationsKatalog = {
     "1": {
         kategorie: "Naturschutz & Lebensräume",
+        icon: "fa-leaf",
         thema: "Streuobstwiese",
         farbe: "#91AE2D",
         bereiche: [
@@ -12,6 +13,7 @@ const stationsKatalog = {
     },
     "2": {
         kategorie: "Naturschutz & Lebensräume",
+        icon: "fa-leaf",
         thema: "Bienenkästen",
         farbe: "#91AE2D",
         bereiche: [
@@ -23,6 +25,7 @@ const stationsKatalog = {
     },
     "3": {
         kategorie: "Naturschutz & Lebensräume",
+        icon: "fa-leaf",
         thema: "Habitatbaum",
         farbe: "#91AE2D",
         bereiche: [
@@ -34,6 +37,7 @@ const stationsKatalog = {
     },
     "4": {
         kategorie: "Naturschutz & Lebensräume",
+        icon: "fa-leaf",
         thema: "Insektenhotel",
         farbe: "#91AE2D",
         bereiche: [
@@ -45,17 +49,19 @@ const stationsKatalog = {
     },
     "5": {
         kategorie: "Naturschutz & Lebensräume",
+        icon: "fa-leaf",
         thema: "Insektenhecke",
         farbe: "#91AE2D",
         bereiche: [
             { titel: "Was siehst du hier?", text: "Eine Insektenhecke besteht aus verschiedenen Sträuchern und blühenden Pflanzen. Sie bietet Nahrung und Schutz für viele Insekten." },
-            { titel: "Warum ist das wichtig?", text: "Blüten liefern Nektar und Pollen. Für viele Insekten sind Hecken wie Straßen und verbinden Lebensräume miteinander." },
+            { titel: "Warum ist das wichtig?", text: "Blüten liefern Nektar und Pollen. Gleichzeitig bieten dichte Zweige Verstecke für Tiere." },
             { titel: "Schon gewusst?", text: "Viele Schmetterlinge und Wildbienen sind auf bestimmte Pflanzen angewiesen." },
             { titel: "Entdeckerfrage", text: "Welche Blüten oder Insekten kannst du hier entdecken?" }
         ]
     },
     "6": {
-        kategorie: "Arten & Tiere",
+        kategorie: "Arten",
+        icon: "fa-paw",
         thema: "Buntspecht",
         farbe: "#C36015",
         bereiche: [
@@ -66,29 +72,32 @@ const stationsKatalog = {
         ]
     },
     "7": {
-        kategorie: "Arten & Tiere",
+        kategorie: "Arten",
+        icon: "fa-paw",
         thema: "Waldameisen",
         farbe: "#C36015",
         bereiche: [
             { titel: "Was siehst du hier?", text: "Waldameisen bauen große Hügel aus Nadeln und Zweigen. In solchen Nestern leben tausende Ameisen zusammen." },
-            { titel: "Warum ist das wichtig?", text: "Sie sind wichtige Helfer im Wald. Ameisen fressen viele andere Insekten und halten das Ökosystem im Gleichgewicht." },
+            { titel: "Warum ist das wichtig?", text: "Sie sind wichtige Helfer im Wald. Ameisen fressen viele andere Insekten und helfen so beim Gleichgewicht im Ökosystem." },
             { titel: "Schon gewusst?", text: "Ein Ameisenstaat kann täglich tausende Insekten erbeuten." },
             { titel: "Entdeckerfrage", text: "Beobachte den Ameisenweg: Wohin tragen die Ameisen ihre Nahrung?" }
         ]
     },
     "8": {
-        kategorie: "Arten & Tiere",
+        kategorie: "Arten",
+        icon: "fa-paw",
         thema: "Fledermaus",
         farbe: "#C36016",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Fledermäuse sind die einzigen Säugetiere, die aktiv fliegen können. Tagsüber schlafen sie oft in Baumhöhlen oder Rindenspalten." },
+            { titel: "Was siehst du hier?", text: "Fledermäuse sind die einzigen Säugetiere, die aktiv fliegen können. Tagsüber schlafen sie oft in Baumhöhlen oder Kästen." },
             { titel: "Warum ist das wichtig?", text: "Nachts jagen sie Insekten. Damit helfen sie, Insektenbestände natürlich zu regulieren." },
             { titel: "Schon gewusst?", text: "Eine Fledermaus kann in einer Nacht mehrere tausend Insekten fressen." },
             { titel: "Entdeckerfrage", text: "Warum sind Fledermäuse wohl hauptsächlich nachts unterwegs?" }
         ]
     },
     "9": {
-        kategorie: "Arten & Tiere",
+        kategorie: "Arten",
+        icon: "fa-paw",
         thema: "Bienen",
         farbe: "#C36017",
         bereiche: [
@@ -100,6 +109,7 @@ const stationsKatalog = {
     },
     "10": {
         kategorie: "Baumarten",
+        icon: "fa-tree",
         thema: "Kiefer",
         farbe: "#3E822C",
         bereiche: [
@@ -111,145 +121,158 @@ const stationsKatalog = {
     },
     "11": {
         kategorie: "Baumarten",
+        icon: "fa-tree",
         thema: "Eiche",
         farbe: "#3E822C",
         bereiche: [
             { titel: "Was siehst du hier?", text: "Eichen haben tief gelappte Blätter und tragen im Herbst Eicheln." },
-            { titel: "Warum ist das wichtig?", text: "Eichen sind wertvoll für die Artenvielfalt. Ihr Holz ist eines der beständigsten in Deutschland." },
+            { titel: "Warum ist das wichtig?", text: "Eichen sind besonders wertvoll für die Artenvielfalt. Ihr Holz ist eines der beständigsten in Deutschland." },
             { titel: "Schon gewusst?", text: "Über 1000 Tierarten leben an und in Eichen." },
             { titel: "Entdeckerfrage", text: "Findest du ein Eichenblatt oder eine Eichel auf dem Boden?" }
         ]
     },
     "12": {
         kategorie: "Baumarten",
+        icon: "fa-tree",
         thema: "Buche",
         farbe: "#3E822C",
         bereiche: [
             { titel: "Was siehst du hier?", text: "Die Rotbuche hat eine glatte graue Rinde und ovale Blätter. Sie ist der häufigste Laubbaum unserer Wälder." },
-            { titel: "Warum ist das wichtig?", text: "Buchen bilden dichte Kronen und prägen das Waldklima maßgeblich." },
+            { titel: "Warum ist das wichtig?", text: "Buchen bilden dichte Kronen und prägen ganze Waldlandschaften." },
             { titel: "Schon gewusst?", text: "Buchen können über 300 Jahre alt werden." },
             { titel: "Entdeckerfrage", text: "Kannst du die glatte Rinde einer Buche erkennen?" }
         ]
     },
     "13": {
         kategorie: "Baumarten",
+        icon: "fa-tree",
         thema: "Lärche",
         farbe: "#3E822C",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Die Lärche ist der einzige Nadelbaum in Deutschland, der im Winter seine Nadeln abwirft." },
-            { titel: "Warum ist das wichtig?", text: "Das Lärchenholz ist sehr widerstandsfähig gegen Witterung und wird gern im Außenbau genutzt." },
-            { titel: "Schon gewusst?", text: "Im Herbst färben sich die Nadeln der Lärche leuchtend goldgelb." },
+            { titel: "Was siehst du hier?", text: "Die Lärche ist ein besonderer Nadelbaum, denn sie ist der einzige Nadelbaum in Deutschland, der seine Nadeln abwirft." },
+            { titel: "Warum ist das wichtig?", text: "Das Holz der Lärche ist besonders widerstandsfähig und wird gerne im Bau verwendet." },
+            { titel: "Schon gewusst?", text: "Im Herbst färben sich die Nadeln der Lärche goldgelb." },
             { titel: "Entdeckerfrage", text: "Kannst du die weichen Nadelbüschel der Lärche erkennen?" }
         ]
     },
     "14": {
         kategorie: "Baumarten",
+        icon: "fa-tree",
         thema: "Birke",
         farbe: "#3E822C",
         bereiche: [
             { titel: "Was siehst du hier?", text: "Birken erkennt man leicht an ihrer weißen Rinde und den kleinen dreieckigen Blättern." },
-            { titel: "Warum ist das wichtig?", text: "Sie sind Pionierbäume und besiedeln als eine der ersten Arten freie Flächen." },
-            { titel: "Schon gewusst?", text: "Birken verbreiten ihre Samen über weite Strecken durch den Wind." },
+            { titel: "Warum ist das wichtig?", text: "Sie sind typische Pionierbäume und wachsen schnell auf freien Flächen." },
+            { titel: "Schon gewusst?", text: "Birken verbreiten ihre Samen durch den Wind." },
             { titel: "Entdeckerfrage", text: "Kannst du die auffällige weiße Rinde entdecken?" }
         ]
     },
     "15": {
         kategorie: "Waldökologie",
+        icon: "fa-seedling",
         thema: "Totholz",
         farbe: "#87B4C3",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Abgestorbene Bäume bleiben manchmal bewusst liegen. Man unterscheidet stehendes und liegendes Totholz." },
-            { titel: "Warum ist das wichtig?", text: "Totholz ist ein wichtiger Lebensraum für Pilze, Käfer, Moose und viele andere Mikroorganismen." },
+            { titel: "Was siehst du hier?", text: "Abgestorbene Bäume oder umgestürzte Stämme bleiben oft bewusst liegen. Man nennt das Totholz." },
+            { titel: "Warum ist das wichtig?", text: "Totholz ist ein wichtiger Lebensraum für Pilze, Käfer, Moose und viele andere Organismen." },
             { titel: "Schon gewusst?", text: "Ein großer Teil der Waldarten ist direkt oder indirekt auf Totholz angewiesen." },
             { titel: "Entdeckerfrage", text: "Kannst du Pilze, Moos oder kleine Löcher im Holz entdecken?" }
         ]
     },
     "16": {
         kategorie: "Waldökologie",
+        icon: "fa-seedling",
         thema: "Pilze im Wald",
         farbe: "#87B4C4",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Pilze wachsen oft auf dem Boden oder Holz. Der sichtbare Teil ist nur der Fruchtkörper." },
-            { titel: "Warum ist das wichtig?", text: "Unter der Erde befindet sich ein riesiges Netzwerk (Myzel), das Bäume mit Nährstoffen versorgt." },
-            { titel: "Schon gewusst?", text: "Pilze sind die 'Müllabfuhr' des Waldes und bauen altes Holz ab." },
+            { titel: "Was siehst du hier?", text: "Pilze wachsen oft auf dem Waldboden oder auf Holz. Der sichtbare Pilz ist nur der Fruchtkörper." },
+            { titel: "Warum ist das wichtig?", text: "Unter der Erde befindet sich ein Netzwerk aus Pilzfäden, das wichtige Aufgaben im Wald erfüllt." },
+            { titel: "Schon gewusst?", text: "Pilze helfen beim Abbau von abgestorbenem Holz." },
             { titel: "Entdeckerfrage", text: "Kannst du verschiedene Pilze entdecken?" }
         ]
     },
     "17": {
         kategorie: "Waldökologie",
+        icon: "fa-seedling",
         thema: "Waldboden",
         farbe: "#87B4C5",
         bereiche: [
             { titel: "Was siehst du hier?", text: "Der Waldboden besteht aus Blättern, Nadeln, Humus und Erde." },
-            { titel: "Warum ist das wichtig?", text: "In ihm leben unzählige Mikroorganismen, die abgestorbene Pflanzen in neue Nahrung umwandeln." },
+            { titel: "Warum ist das wichtig?", text: "In ihm leben unzählige kleine Tiere und Mikroorganismen, die abgestorbene Pflanzen zersetzen." },
             { titel: "Schon gewusst?", text: "Ein Teelöffel Waldboden kann Milliarden Mikroorganismen enthalten." },
-            { titel: "Entdeckerfrage", text: "Schau dir den Boden genau an – welche Pflanzenreste erkennst du?" }
+            { titel: "Entdeckerfrage", text: "Schau dir den Boden genau an – welche Tiere oder Pflanzenreste erkennst du?" }
         ]
     },
     "18": {
         kategorie: "Waldökologie",
+        icon: "fa-seedling",
         thema: "Wasser im Wald",
         farbe: "#87B4C6",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Wälder speichern Wasser im Boden wie ein Schwamm und geben es langsam wieder ab." },
-            { titel: "Warum ist das wichtig?", text: "Sie helfen, Überschwemmungen zu verhindern und neues Grundwasser zu bilden." },
-            { titel: "Schon gewusst?", text: "Bäume 'schwitzen' und verdunsten über ihre Blätter große Mengen Wasser." },
+            { titel: "Was siehst du hier?", text: "Wälder speichern Wasser im Boden und geben es langsam wieder ab." },
+            { titel: "Warum ist das wichtig?", text: "So helfen sie, Überschwemmungen zu verhindern und Grundwasser zu bilden." },
+            { titel: "Schon gewusst?", text: "Bäume verdunsten über ihre Blätter große Mengen Wasser." },
             { titel: "Entdeckerfrage", text: "Warum ist Wasser für Bäume so wichtig?" }
         ]
     },
     "19": {
         kategorie: "Forstwirtschaft",
+        icon: "fa-tractor",
         thema: "Naturverjüngung",
         farbe: "#78482B",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Hier wachsen junge Bäume ganz von allein aus den Samen der alten Bäume nach." },
-            { titel: "Warum ist das wichtig?", text: "Naturverjüngung ist die natürlichste und nachhaltigste Form, einen Wald zu erneuern." },
-            { titel: "Schon gewusst?", text: "Ein einziger Baum kann im Laufe seines Lebens Millionen Samen produzieren." },
+            { titel: "Was siehst du hier?", text: "Hier wachsen junge Bäume aus Samen der alten Bäume nach." },
+            { titel: "Warum ist das wichtig?", text: "Naturverjüngung ist eine natürliche und nachhaltige Form der Waldverjüngung." },
+            { titel: "Schon gewusst?", text: "Ein Baum kann im Laufe seines Lebens Millionen Samen produzieren." },
             { titel: "Entdeckerfrage", text: "Wie viele junge Bäume kannst du entdecken?" }
         ]
     },
     "20": {
         kategorie: "Forstwirtschaft",
+        icon: "fa-tractor",
         thema: "Pflanzung",
         farbe: "#78482B",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Manchmal pflanzen Menschen junge Bäume gezielt an bestimmten Stellen." },
-            { titel: "Warum ist das wichtig?", text: "Das hilft, den Wald nach Stürmen oder Trockenheit schneller wieder aufzubauen." },
-            { titel: "Schon gewusst?", text: "Dabei werden heute oft viele verschiedene Baumarten gemischt (Mischwald)." },
-            { titel: "Entdeckerfrage", text: "Kannst du Reihen oder Schutzhüllen um junge Bäume erkennen?" }
+            { titel: "Was siehst du hier?", text: "Manchmal werden junge Bäume von Menschen gepflanzt." },
+            { titel: "Warum ist das wichtig?", text: "Das hilft, den Wald nach Stürmen, Trockenheit oder Holznutzung zu erneuern." },
+            { titel: "Schon gewusst?", text: "Dabei werden oft viele verschiedene Baumarten gepflanzt." },
+            { titel: "Entdeckerfrage", text: "Kannst du Reihen junger Bäume erkennen?" }
         ]
     },
     "21": {
         kategorie: "Forstwirtschaft",
+        icon: "fa-tractor",
         thema: "Ernte",
         farbe: "#78482B",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Bei der Holzernte werden ausgewählte Bäume gefällt, um Platz für neue Generationen zu schaffen." },
-            { titel: "Warum ist das wichtig?", text: "Holz ist ein nachwachsender Rohstoff, der umweltfreundlicher ist als Plastik oder Beton." },
-            { titel: "Schon gewusst?", text: "Man nennt die gezielte Entnahme von Bäumen auch Bestandespflege." },
-            { titel: "Entdeckerfrage", text: "Siehst du Spuren von Holzernte oder Baumstümpfe im Wald?" }
+            { titel: "Was siehst du hier?", text: "Bei der Holzernte werden ausgewählte Bäume gefällt und genutzt." },
+            { titel: "Warum ist das wichtig?", text: "Holz ist ein nachhaltiger Rohstoff, der viele Materialien ersetzen kann." },
+            { titel: "Schon gewusst?", text: "Bäume werden oft gezielt entnommen, damit andere besser wachsen können." },
+            { titel: "Entdeckerfrage", text: "Siehst du Spuren von Holzernte im Wald?" }
         ]
     },
     "22": {
         kategorie: "Forstwirtschaft",
+        icon: "fa-tractor",
         thema: "Kalamität",
         farbe: "#78482B",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Kalamitäten sind Schäden im Wald, die durch Sturm, Käfer oder Trockenheit entstehen." },
-            { titel: "Warum ist das wichtig?", text: "Solche Ereignisse können ganze Bestände verändern und erfordern schnelles Handeln der Förster." },
-            { titel: "Schon gewusst?", text: "Nach einer Kalamität wächst oft ein neuer, widerstandsfähigerer Wald nach." },
-            { titel: "Entdeckerfrage", text: "Kannst du Veränderungen oder abgestorbene Bereiche im Wald sehen?" }
+            { titel: "Was siehst du hier?", text: "Kalamitäten sind Schäden im Wald durch Sturm, Trockenheit oder Schädlinge." },
+            { titel: "Warum ist das wichtig?", text: "Solche Ereignisse können große Waldflächen zum Absterben bringen." },
+            { titel: "Schon gewusst?", text: "Nach einer Kalamität beginnt oft ein neuer Wald zu wachsen. Es ist eine Chance für gesündere Bäume." },
+            { titel: "Entdeckerfrage", text: "Welche Veränderungen im Wald kannst du hier erkennen?" }
         ]
     },
     "23": {
         kategorie: "Forstwirtschaft",
+        icon: "fa-tractor",
         thema: "Holz als Rohstoff",
         farbe: "#78482B",
         bereiche: [
-            { titel: "Was siehst du hier?", text: "Holz ist extrem vielseitig. Wir nutzen es für Möbel, Papier, Häuser oder zum Heizen." },
-            { titel: "Warum ist das wichtig?", text: "Im Gegensatz zu Erdöl oder Metall wächst Holz immer wieder nach." },
-            { titel: "Schon gewusst?", text: "Bäume speichern CO2 – und dieses bleibt auch im verbauten Holz (z.B. in einem Schrank) gespeichert." },
-            { titel: "Entdeckerfrage", text: "Welche Dinge aus Holz fallen dir in deinem Alltag ein?" }
+            { titel: "Was siehst du hier?", text: "Holz ist ein vielseitiger Rohstoff. Es wird für Möbel, Häuser, Papier oder Energie genutzt." },
+            { titel: "Warum ist das wichtig?", text: "Im Gegensatz zu vielen anderen Materialien wächst Holz nach." },
+            { titel: "Schon gewusst?", text: "Holz speichert während seines Wachstums CO₂ aus der Atmosphäre." },
+            { titel: "Entdeckerfrage", text: "Welche Dinge aus Holz kennst du aus deinem Alltag?" }
         ]
     }
 };

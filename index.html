@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wald-Entdecker Station</title>
+    <title>Wald-Entdecker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="daten.js"></script>
     <style>
         :root {
@@ -124,7 +125,7 @@
 
 <header id="category-header">
     <div class="header-content">
-        <span id="kat-label">Wald-Entdecker</span>
+        <i id="kat-icon" class="fa-solid"></i> <span id="kat-label">Wald-Entdecker</span>
         <span id="station-number">Station --</span>
     </div>
 </header>
@@ -156,7 +157,16 @@
 
             // 3. Header & Texte anpassen
             document.getElementById('category-header').style.backgroundColor = farbe;
-            document.getElementById('kat-label').textContent = s.kategorie;
+            
+            // Icon setzen: Falls kein Icon in daten.js definiert ist, wird ein Standard-Baum (fa-tree) genutzt
+            const iconClass = s.icon || "fa-tree";
+            
+            // Wir bauen den Inhalt des kat-label neu zusammen: Icon + Text
+            document.getElementById('kat-label').innerHTML = `
+                <i class="fa-solid ${iconClass}"></i> 
+                <span>${s.kategorie}</span>
+            `;
+
             document.getElementById('thema-label').textContent = s.thema;
             document.getElementById('station-number').textContent = "Station " + (stationID.padStart(2, '0'));
 
